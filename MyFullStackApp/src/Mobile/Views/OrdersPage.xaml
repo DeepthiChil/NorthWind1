@@ -1,0 +1,18 @@
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    x:Class="MyFullStackApp.Mobile.Views.OrdersPage"
+    Title="Orders">
+    <VerticalStackLayout Padding="10">
+        <CollectionView x:Name="cvOrders">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="5">
+                        <Label Text="{Binding ShipCity}" />
+                        <Label Text="{Binding OrderDate, StringFormat='Date: {0:MM/dd/yyyy}'}" />
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Text="New Order" Clicked="OnNewOrder"/>
+    </VerticalStackLayout>
+</ContentPage>

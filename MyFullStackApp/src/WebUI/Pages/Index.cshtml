@@ -1,0 +1,13 @@
+@page
+@model MyFullStackApp.WebUI.Pages.IndexModel
+@{
+    ViewData["Title"] = "Customers";
+}
+<h1>Customers</h1>
+<ul id="customerList">
+    @foreach (var c in Model.Customers)
+    {
+        <li><a asp-page="/Orders" asp-route-id="@c.CustomerID">@c.CompanyName</a></li>
+    }
+</ul>
+<script src="~/js/signalr-client.js"></script>

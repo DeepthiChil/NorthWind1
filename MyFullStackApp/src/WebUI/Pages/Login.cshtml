@@ -1,0 +1,11 @@
+@page
+@model MyFullStackApp.WebUI.Pages.LoginModel
+
+<section>
+    <form method="post">
+        <div><input asp-for="Username" placeholder="Username" /></div>
+        <div><input asp-for="Password" type="password" placeholder="Password" /></div>
+        <button type="submit">Login</button>
+    </form>
+    @if (Model.Error) <p style="color:red">Login failed</p>
+</section>
